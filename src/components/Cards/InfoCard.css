@@ -1,5 +1,10 @@
-.info-card-container {
-  padding: 16px;
-  height: 360px;
-  width: 500px;
+.info-card {
+  box-shadow: 4px 4px 8px 0px rgba(104, 17, 17, 0.25);
+}
+
+.tag-pill {
+  color: black;
+  background-color: gray;
+  border-radius: 1.25rem;
+  margin-left: 5px;
 }

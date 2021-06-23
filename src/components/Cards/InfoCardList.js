@@ -1,11 +1,12 @@
 import React from 'react';
+import adventuringDictionary from '../../dictionaries/adventuring';
 import InfoCard from './InfoCard';
 import './InfoCardList.css';
 
 function InfoCardList() {
-  const cards = [1,2,3,4,5];
+  const cards = adventuringDictionary.movement;
   const list = cards.map((item, index) => (
-    <InfoCard key={index} card={item} className="info-card" />
+    <InfoCard key={index} info={item} className="info-card" />
   ));
 
   return (
