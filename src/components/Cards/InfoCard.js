@@ -18,7 +18,7 @@ function InfoCard({ info }) {
         <Card.Body>
           <Card.Title>{info.title}</Card.Title>
           <Card.Text>{info.shortDescription}</Card.Text>
-          {(info.longDescription || info.table) && (
+          {(info.longerDescription || info.table) && (
             <Button variant="danger" onClick={() => setShowInfoModal(true)}>
               More Info
             </Button>

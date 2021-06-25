@@ -4,7 +4,7 @@ import InfoCard from './InfoCard';
 import './InfoCardList.css';
 
 function InfoCardList() {
-  const cards = adventuringDictionary.movement;
+  const cards = adventuringDictionary;
   const list = cards.map((item, index) => (
     <InfoCard key={index} info={item} className="info-card" />
   ));

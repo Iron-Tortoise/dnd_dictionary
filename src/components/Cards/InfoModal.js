@@ -14,7 +14,8 @@ function InfoModal({ info, setShowInfoModal, showInfoModal }) {
           {info.title}
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body>{info.longDescription ? info.longDescription : info.shortDescription}</Modal.Body>
+      <Modal.Body>{info.shortDescription && info.shortDescription}</Modal.Body>
+      {info.longerDescription && info.longerDescription.map(descrip => <Modal.Body>{descrip}</Modal.Body>)}
       {info.table && (
         <Modal.Body>
           <Table striped bordered hover size="sm">
