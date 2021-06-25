@@ -18,11 +18,18 @@ function InfoCard({ info }) {
         <Card.Body>
           <Card.Title>{info.title}</Card.Title>
           <Card.Text>{info.shortDescription}</Card.Text>
-          <Button variant="danger" onClick={() => setShowInfoModal(true)}>
-            More Info
-          </Button>
+          {(info.longDescription || info.table) && (
+            <Button variant="danger" onClick={() => setShowInfoModal(true)}>
+              More Info
+            </Button>
+          )}
         </Card.Body>
-        {info.di && (<Card.Footer><b>Di Roll: </b>{info.di}</Card.Footer>)}
+        {info.di && (
+          <Card.Footer>
+            <b>Di Roll: </b>
+            {info.di}
+          </Card.Footer>
+        )}
       </Card>
       <InfoModal
         info={info}

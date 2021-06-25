@@ -5,7 +5,6 @@ function InfoModal({ info, setShowInfoModal, showInfoModal }) {
   return (
     <Modal
       size="lg"
-      fullscreen
       show={showInfoModal}
       onHide={() => setShowInfoModal(false)}
       aria-labelledby="example-modal-sizes-title-lg"
@@ -15,7 +14,7 @@ function InfoModal({ info, setShowInfoModal, showInfoModal }) {
           {info.title}
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body>{info.longDescription}</Modal.Body>
+      <Modal.Body>{info.longDescription ? info.longDescription : info.shortDescription}</Modal.Body>
       {info.table && (
         <Modal.Body>
           <Table striped bordered hover size="sm">
@@ -38,14 +37,7 @@ function InfoModal({ info, setShowInfoModal, showInfoModal }) {
           </Table>
         </Modal.Body>
       )}
-      <Modal.Footer className="d-inline">
-        {info.di && (
-          <div>
-            <b>Di Roll: </b>
-            {info.di}
-          </div>
-        )}
-      </Modal.Footer>
+      {info.di && (<Modal.Footer className="d-inline"><b>Di Roll: </b>{info.di}</Modal.Footer>)}
     </Modal>
   );
 }
