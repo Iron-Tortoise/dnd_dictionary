@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Card, Button, Badge } from "react-bootstrap";
 import "./InfoCard.css";
-import InfoModal from "./InfoModal";
+import InfoModal from "./InfoModal/InfoModal";
 
 function InfoCard({ info }) {
   const [showInfoModal, setShowInfoModal] = useState(false);

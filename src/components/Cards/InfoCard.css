@@ -3,8 +3,8 @@
 }
 
 .tag-pill {
-  color: black;
-  background-color: gray;
+  color: rgb(42, 42, 42);
+  background-color: rgb(173, 173, 173);
   border-radius: 1.25rem;
   margin-left: 5px;
 }
