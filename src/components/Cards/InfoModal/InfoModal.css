@@ -1,0 +1,28 @@
+/* .modal-body::-webkit-scrollbar {
+  width: 1em;
+}
+ 
+.modal-body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+.modal-body::-webkit-scrollbar-thumb {
+  background-color: rgb(211, 0, 0);
+} */
+
+/* width */
+.modal-body::-webkit-scrollbar {
+  width: .75em;
+}
+
+/* Track */
+.modal-body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 7px;
+}
+
+/* Handle */
+.modal-body::-webkit-scrollbar-thumb {
+  background: #dc3545;
+  border-radius: 7px;
+}
